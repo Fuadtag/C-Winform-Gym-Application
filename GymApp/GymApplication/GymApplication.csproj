@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09853C54-8104-4FF8-80F1-66C50B69934F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GymApplication</RootNamespace>
+    <AssemblyName>GymApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\dbcontext.cs" />
+    <Compile Include="Forms\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomersInfosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomersInfosForm.Designer.cs">
+      <DependentUpon>CustomersInfosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuItemsForm.Designer.cs">
+      <DependentUpon>MenuItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PackagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PackagesForm.Designer.cs">
+      <DependentUpon>PackagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentsForm.Designer.cs">
+      <DependentUpon>PaymentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportingForm.Designer.cs">
+      <DependentUpon>ReportingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RestouranFormt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RestouranFormt.Designer.cs">
+      <DependentUpon>RestouranFormt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909201322060_ModifiedTablesAdde.cs" />
+    <Compile Include="Migrations\201909201322060_ModifiedTablesAdde.Designer.cs">
+      <DependentUpon>201909201322060_ModifiedTablesAdde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909201324424_PackageIdDeleted.cs" />
+    <Compile Include="Migrations\201909201324424_PackageIdDeleted.Designer.cs">
+      <DependentUpon>201909201324424_PackageIdDeleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909240728548_TablesModified.cs" />
+    <Compile Include="Migrations\201909240728548_TablesModified.Designer.cs">
+      <DependentUpon>201909240728548_TablesModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909240810054_NewTableModified.cs" />
+    <Compile Include="Migrations\201909240810054_NewTableModified.Designer.cs">
+      <DependentUpon>201909240810054_NewTableModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909250838545_CustomerTableModified.cs" />
+    <Compile Include="Migrations\201909250838545_CustomerTableModified.Designer.cs">
+      <DependentUpon>201909250838545_CustomerTableModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909261010156_ CustomerModelModified.cs" />
+    <Compile Include="Migrations\201909261010156_ CustomerModelModified.Designer.cs">
+      <DependentUpon>201909261010156_ CustomerModelModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Models\MenuOrder.cs" />
+    <Compile Include="Models\Package.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomersInfosForm.resx">
+      <DependentUpon>CustomersInfosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuItemsForm.resx">
+      <DependentUpon>MenuItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PackagesForm.resx">
+      <DependentUpon>PackagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentsForm.resx">
+      <DependentUpon>PaymentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportingForm.resx">
+      <DependentUpon>ReportingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RestouranFormt.resx">
+      <DependentUpon>RestouranFormt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909201322060_ModifiedTablesAdde.resx">
+      <DependentUpon>201909201322060_ModifiedTablesAdde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909201324424_PackageIdDeleted.resx">
+      <DependentUpon>201909201324424_PackageIdDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909240728548_TablesModified.resx">
+      <DependentUpon>201909240728548_TablesModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909240810054_NewTableModified.resx">
+      <DependentUpon>201909240810054_NewTableModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909250838545_CustomerTableModified.resx">
+      <DependentUpon>201909250838545_CustomerTableModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909261010156_ CustomerModelModified.resx">
+      <DependentUpon>201909261010156_ CustomerModelModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
